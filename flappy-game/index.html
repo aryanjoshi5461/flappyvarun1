@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Flappy Clone</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div id="mainWrap">
+
+        <!-- LEFT: GAME -->
+        <div id="gameContainer">
+            <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+            <div id="overlay" class="hidden">
+                <div id="countdown" class="centerText"></div>
+
+                <div id="gameOver" class="centerText hidden">
+                    <video id="loseVideo" class="hidden" width="200" autoplay muted playsinline>
+                        <source src="assets/end.mp4" type="video/mp4">
+                    </video>
+
+                    <h1>YOU LOST</h1>
+                    <button id="restartBtn" disabled>Restart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: SCOREBOARD -->
+        <div id="scoreboard">
+            <h2>Acne Filled</h2>
+            <h3>Top 5 Scores</h3>
+
+            <ul id="scoreList"></ul>
+        </div>
+
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
